@@ -1,19 +1,16 @@
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
-const [input, setInput] = useState(0)
-const handleClick = ()=>{
-  setInput(input+1);
-}
-
+  let [count,setCount]= useState(0)
+  
   return (
     <div>
-        <p>Button clicked {input} times</p>
-        <button onClick={handleClick}>Click me</button>
+      <p>Button clicked {count} times</p>
+      <button onClick={()=>setCount(count+1)}>Click me</button>
     </div>
-  )
+    )
 }
 
 export default App
